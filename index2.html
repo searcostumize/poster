@@ -1,46 +1,88 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afbeeldingen en Tekst</title>
+    <title>Poster - Let op de Cookies</title>
     <style>
-        .container {
-            text-align: center;
-            margin: 20px;
-        }
-        .warning-image {
-            position: relative;
-            display: inline-block;
-        }
-        .warning-image img {
-            width: 100%;
-            max-width: 500px; /* Pas dit aan indien nodig */
-        }
-        .warning-image .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+        body, html {
+            margin: 0;
+            padding: 0;
             height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .poster {
+            text-align: center;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .top-section {
+            display: flex;
             justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .top-section h1 {
+            font-size: 48px;
+            margin-right: 20px;
+            color: #333;
+        }
+
+        .top-section img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .bottom-image {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bottom-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .bottom-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
+            padding: 10px 20px;
+            font-size: 24px;
             font-weight: bold;
-            /* Verwijder of pas de achtergrondkleur aan */
-            background: none; /* Verwijder de achtergrondkleur */
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p>Let op de</p>
-        <img src="path/to/first-image.jpg" alt="Eerste afbeelding" width="500" />
-        <div class="warning-image">
-            <img src="path/to/second-image.jpg" alt="Tweede afbeelding" />
-            <div class="overlay">Let op welke koekjes je installeert</div>
+
+    <div class="poster">
+        <!-- Top Section with text and image -->
+        <div class="top-section">
+            <h1>Let op de</h1>
+            <img src="alert-icon.jpg" alt="Waarschuwing icoon">
+        </div>
+
+        <!-- Bottom Section with image and text overlay -->
+        <div class="bottom-image">
+            <img src="cookies-image.jpg" alt="Afbeelding van cookies">
+            <div class="bottom-text">Let op welke cookies je installeert</div>
         </div>
     </div>
+
 </body>
 </html>
