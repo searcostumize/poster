@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,29 +10,35 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
         }
 
         .poster {
+            position: relative;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             height: 100vh;
-            padding: 20px;
+            background-image: url('cookie monster.png');
+            background-size: cover; /* Zorg ervoor dat de afbeelding de volledige achtergrond bedekt */
+            background-position: center; /* Centraal plaatsen van de afbeelding */
+            background-repeat: no-repeat; /* Voorkom herhaling van de afbeelding */
+            color: white; /* Tekstkleur voor leesbaarheid */
+            overflow: hidden;
         }
 
         .top-section {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
+            justify-content: center;
+            z-index: 1; /* Zorgt ervoor dat de inhoud boven de achtergrond wordt weergegeven */
         }
 
         .top-section h1 {
             font-size: 48px;
             margin-right: 20px;
-            color: #333;
+            color: #fff; /* Witte kleur voor betere zichtbaarheid op de achtergrond */
         }
 
         .top-section img {
@@ -41,51 +47,32 @@
             border-radius: 50%;
         }
 
-        .cropped-image {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            height: 65%; /* Show only the top 45% */
-            margin: 0 auto;
-            overflow: hidden; /* Hide the lower 55% */
-        }
-
-        .cropped-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Scale the image to fill the container while keeping the aspect ratio */
-            object-position: top; /* Keep the top part of the image visible */
-        }
-
         .bottom-text {
             position: absolute;
-            top: 40%; /* 10% above the center (50% - 10% = 40%) */
+            bottom: 10%; /* Plaats tekst net boven de onderkant van de afbeelding */
             left: 50%;
             transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.6); /* Donkere achtergrond voor leesbaarheid */
             color: white;
             padding: 10px 20px;
             font-size: 24px;
             font-weight: bold;
             text-align: center;
-            width: 100%;
+            z-index: 1; /* Zorg ervoor dat de tekst boven de achtergrond wordt weergegeven */
         }
     </style>
 </head>
 <body>
 
     <div class="poster">
-        <!-- Top Section with text and image -->
+        <!-- Bovenste gedeelte met tekst en afbeelding -->
         <div class="top-section">
             <h1>Let op de</h1>
-            <img src="cookie.png">
+            <img src="cookie.png" alt="Waarschuwing icoon">
         </div>
 
-        <!-- Cropped Bottom Section with image and text overlay -->
-        <div class="cropped-image">
-            <img src="cookiemonster.png">
-            <div class="bottom-text">Let op welke cookies je installeert</div>
-        </div>
+        <!-- Tekst onderaan -->
+        <div class="bottom-text">Let op welke cookies je installeert</div>
     </div>
 
 </body>
