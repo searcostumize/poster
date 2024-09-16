@@ -41,21 +41,25 @@
             border-radius: 50%;
         }
 
-        .bottom-image {
+        .cropped-image {
             position: relative;
             width: 100%;
             max-width: 800px;
+            height: 45%; /* Show only the top 45% */
             margin: 0 auto;
+            overflow: hidden; /* Hide the lower 55% */
         }
 
-        .bottom-image img {
+        .cropped-image img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover; /* Scale the image to fill the container while keeping the aspect ratio */
+            object-position: top; /* Keep the top part of the image visible */
         }
 
         .bottom-text {
             position: absolute;
-            top: 30%; /* 20% boven het midden (50% - 20% = 30%) */
+            top: 40%; /* 10% above the center (50% - 10% = 40%) */
             left: 50%;
             transform: translateX(-50%);
             background-color: rgba(0, 0, 0, 0.6);
@@ -77,8 +81,8 @@
             <img src="cookie.png">
         </div>
 
-        <!-- Bottom Section with image and text overlay -->
-        <div class="bottom-image">
+        <!-- Cropped Bottom Section with image and text overlay -->
+        <div class="cropped-image">
             <img src="cookiemonster.png">
             <div class="bottom-text">Let op welke cookies je installeert</div>
         </div>
