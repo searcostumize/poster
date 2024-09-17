@@ -1,22 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Poster</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Verwijs naar de CSS-file -->
+    <title>Poster - Let op de Cookies</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .poster {
+            position: relative;
+            text-align: center;
+            height: 100vh;
+            background-image: url('cookiemonster.png');
+            background-size: 100% 200%; /* Vergroot de afbeelding verticaal zodat alleen de bovenste 60% zichtbaar is */
+            background-position: 0% -20%; /* Positioneer de bovenkant van de afbeelding */
+            background-repeat: no-repeat;
+            color: white;
+            overflow: hidden;
+        }
+
+        .top-section {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .top-section h1 {
+            font-size: 48px;
+            margin-right: 20px;
+            color: #fff;
+        }
+
+        .top-section img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .bottom-text {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
+
     <div class="poster">
+        <!-- Bovenste gedeelte met tekst en afbeelding -->
         <div class="top-section">
             <h1>Let op de</h1>
-            <img src="Cookie.png" alt="Cookie"> <!-- Aangepaste bestandsnaam -->
+            <img src="Cookie.png" alt="Waarschuwing icoon">
         </div>
 
-        <div class="bottom-section">
-            <img src="Cookie.png" alt="Cookie"> <!-- Aangepaste bestandsnaam -->
-            <p>Let op welke cookies je installeert</p>
-        </div>
+        <!-- Tekst onderaan -->
+        <div class="bottom-text">Let op welke cookies je installeert</div>
     </div>
+
 </body>
 </html>
