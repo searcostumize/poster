@@ -9,7 +9,7 @@ body, html {
     position: relative;
     text-align: center;
     height: 100vh;
-    background-image: url('cookie monster.png');
+    background-image: url('cookiemonster.png'); /* Aangepaste bestandsnaam */
     background-size: 100% 166.67%; /* Vergroot de afbeelding verticaal om alleen de bovenste 60% zichtbaar te maken */
     background-position: top; /* Zorgt ervoor dat de bovenkant van de afbeelding zichtbaar is */
     background-repeat: no-repeat;
