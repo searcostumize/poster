@@ -1,3 +1,4 @@
+/* Algemene stijlen */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,59 +7,55 @@ body, html {
 }
 
 .poster {
-    position: relative;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
-    background-image: url('cookiemonster.png'); /* Aangepaste bestandsnaam */
-    background-size: 100% 166.67%; /* Vergroot de afbeelding verticaal om alleen de bovenste 60% zichtbaar te maken */
-    background-position: top; /* Zorgt ervoor dat de bovenkant van de afbeelding zichtbaar is */
-    background-repeat: no-repeat;
-    color: white;
-    overflow: hidden;
+    background-color: #f4f4f4;
 }
 
+/* Stijl voor het bovenste gedeelte met tekst en afbeelding */
 .top-section {
-    position: absolute;
-    top: 10%; /* 10% van de hoogte van de poster */
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    color: #000; /* Zet de kleur van de tekst naar zwart */
+    padding: 20px;
+    position: relative;
 }
 
 .top-section h1 {
-    font-size: 48px;
+    color: black; /* Zwarte tekst */
+    font-size: 2.5em;
     margin-right: 20px;
 }
 
 .top-section img {
-    width: 100px; /* Pas de breedte van de afbeelding aan indien nodig */
+    max-width: 100px;
     height: auto;
 }
 
+/* Achtergrondsectie met cookiemonster.png */
+.background-section {
+    flex-grow: 1;
+    background-image: url('cookiemonster.png');
+    background-size: cover;
+    background-position: top; /* Toont de bovenste 60% */
+    height: 100%; /* Vul de resterende hoogte */
+}
+
+/* Stijl voor het onderste gedeelte */
 .bottom-section {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     padding: 20px;
-    z-index: 1;
-    color: white;
-}
-
-.bottom-section img {
-    width: 100%;
-    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .bottom-section p {
+    font-size: 2em; /* Maakt de tekst groter */
+    color: white;
+    text-align: center;
     margin: 0;
-    font-size: 36px; /* Vergroot het lettertype van de onderste tekst */
-    background-color: rgba(0, 0, 0, 0.5); /* Optioneel: achtergrondkleur voor leesbaarheid */
-    padding: 10px;
+    padding: 10px 20px;
 }
