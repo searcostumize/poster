@@ -10,18 +10,35 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .poster {
             position: relative;
             text-align: center;
             height: 100vh;
+            width: 100%;
             background-image: url('cookiemonster.png');
             background-size: 60% auto;
-            background-position: center -20%; 
+            background-position: center -20%;
             background-repeat: no-repeat;
             color: white;
             overflow: hidden;
+        }
+
+        .side-image {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .side-image img {
+            width: 100%;
+            height: auto;
         }
 
         .top-section {
@@ -42,9 +59,8 @@
         }
 
         .top-section img {
-            width: 400px;
+            width: 150px;
             height: auto;
-            
         }
 
         .bottom-text {
@@ -55,7 +71,7 @@
             background-color: rgba(0, 0, 0, 0.6);
             color: white;
             padding: 10px 20px;
-            font-size: 80px;
+            font-size: 40px;
             font-weight: bold;
             text-align: center;
             z-index: 1;
@@ -64,13 +80,25 @@
 </head>
 <body>
 
+    <!-- Linkerkant met afbeelding cookief.png -->
+    <div class="side-image">
+        <img src="cookief.png" alt="Linker afbeelding">
+    </div>
+
+    <!-- Hoofdsectie met tekst en cookiemonster achtergrond -->
     <div class="poster">
         <div class="top-section">
             <h1>Let op de</h1>
             <img src="Cookie.png" alt="Waarschuwing icoon">
         </div>
-          <div class="bottom-text">LET OP WELKE COOKIES JE INSTALEERt</div>
+        <div class="bottom-text">LET OP WELKE COOKIES JE INSTALLEERT</div>
+    </div>
+
+    <!-- Rechterkant met afbeelding cookier.png -->
+    <div class="side-image">
+        <img src="cookier.png" alt="Rechter afbeelding">
     </div>
 
 </body>
 </html>
+
