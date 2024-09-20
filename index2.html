@@ -77,3 +77,64 @@
 
 </body>
 </html>
+/* Algemene stijlen */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Stijl voor het bovenste gedeelte met tekst en afbeelding */
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.top-section h1 {
+    color: black; /* Zwarte tekst */
+    font-size: 2.5em;
+    margin-right: 20px;
+}
+
+.top-section img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Achtergrondsectie met cookiemonster.png */
+.background-section {
+    flex-grow: 1;
+    background-image: url('cookiemonster.png');
+    background-size: cover;
+    background-position: top; /* Toont de bovenste 60% */
+    height: 100%; /* Vul de resterende hoogte */
+}
+
+/* Stijl voor het onderste gedeelte */
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bottom-section p {
+    font-size: 2em; /* Maakt de tekst groter */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px 20px;
+}
